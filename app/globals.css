@@ -22,6 +22,11 @@ h1 { margin: 0 0 24px; font-size: clamp(48px, 8vw, 120px); line-height: .9; lett
 .course-content section { margin-bottom: 80px; scroll-margin-top: 24px; }
 .course-content h2 { margin: 0 0 16px; font-size: 28px; }
 .course-content > section > p { max-width: 760px; font-size: 16px; line-height: 1.55; }
+.presentation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.presentation-grid article { border-top: 1px solid #111; padding-top: 14px; }
+.presentation-grid h3 { margin: 0 0 18px; font-size: 20px; }
+.presentation-grid p, .presentation-grid li { font-size: 14px; line-height: 1.5; }
+.presentation-grid ul { padding-left: 20px; }
 .schedule-table { border-top: 1px solid #111; margin-top: 32px; }
 .schedule-row { display: grid; grid-template-columns: 100px 1.3fr 1fr 1fr; gap: 24px; padding: 16px 0 24px; border-bottom: 1px solid #111; }
 .week-label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
@@ -49,4 +54,5 @@ h1 { margin: 0 0 24px; font-size: clamp(48px, 8vw, 120px); line-height: .9; lett
   .course-nav nav { margin-top: 20px; }
   .schedule-row { grid-template-columns: 1fr; gap: 14px; }
   .schedule-row > div:nth-child(3), .schedule-row > div:nth-child(4) { grid-column: 1; }
+  .presentation-grid { grid-template-columns: 1fr; }
 }
