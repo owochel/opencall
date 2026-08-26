@@ -1,0 +1,52 @@
+@import "tailwindcss";
+* { box-sizing: border-box; }
+html { background: #fff; color: #111; font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; }
+a { color: #0000ee; }
+.site-shell { min-height: 100vh; padding: 24px; }
+.site-header { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 12px; border-bottom: 1px solid #111; font-size: 14px; }
+.site-header a { color: #111; font-weight: 700; text-decoration: none; }
+.home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding-top: 72px; }
+h1 { margin: 0 0 24px; font-size: clamp(48px, 8vw, 120px); line-height: .9; letter-spacing: -.06em; }
+.home-grid p { font-size: 14px; line-height: 1.45; }
+.term-list { border-top: 1px solid #111; }
+.term-list a { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #111; font-size: 24px; }
+@media (max-width: 700px) { .site-shell { padding: 16px; } .home-grid { grid-template-columns: 1fr; padding-top: 48px; } }
+
+.course-layout { display: grid; grid-template-columns: minmax(220px, 1fr) 3fr; gap: 48px; padding-top: 48px; }
+.course-nav { position: sticky; top: 24px; align-self: start; }
+.course-nav h1, .reading-layout h1 { font-size: clamp(44px, 6vw, 84px); }
+.course-nav p { font-size: 14px; line-height: 1.5; }
+.course-nav nav { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 32px; }
+.course-content { max-width: 1100px; }
+.course-content section { margin-bottom: 80px; scroll-margin-top: 24px; }
+.course-content h2 { margin: 0 0 16px; font-size: 28px; }
+.course-content > section > p { max-width: 760px; font-size: 16px; line-height: 1.55; }
+.schedule-table { border-top: 1px solid #111; margin-top: 32px; }
+.schedule-row { display: grid; grid-template-columns: 100px 1.3fr 1fr 1fr; gap: 24px; padding: 16px 0 24px; border-bottom: 1px solid #111; }
+.week-label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.schedule-row h3 { margin: 0 0 8px; font-size: 18px; }
+.schedule-row h4 { margin: 2px 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+.schedule-row p { margin: 0; font-size: 13px; line-height: 1.45; }
+.week-readings { margin-top: 18px; }
+.week-readings a { display: block; margin-top: 7px; font-size: 13px; line-height: 1.35; }
+.reading-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding-top: 48px; }
+.reading-layout > div > p { max-width: 420px; font-size: 14px; line-height: 1.5; }
+.reading-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid #111; }
+.reading-list li { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 12px 0; border-bottom: 1px solid #111; }
+.reading-list a { overflow-wrap: anywhere; }
+.reading-list span { font-size: 11px; color: #555; }
+.reading-group { margin-bottom: 40px; }
+.reading-group h2 { margin: 0 0 10px; font-size: 18px; }
+@media (max-width: 900px) {
+  .course-layout, .reading-layout { grid-template-columns: 1fr; }
+  .course-nav { position: static; }
+  .schedule-row { grid-template-columns: 70px 1fr; }
+  .schedule-row > div:nth-child(3), .schedule-row > div:nth-child(4) { grid-column: 2; }
+}
+@media (max-width: 700px) {
+  .course-layout, .reading-layout { padding-top: 32px; gap: 32px; }
+  .course-nav nav { margin-top: 20px; }
+  .schedule-row { grid-template-columns: 1fr; gap: 14px; }
+  .schedule-row > div:nth-child(3), .schedule-row > div:nth-child(4) { grid-column: 1; }
+}
