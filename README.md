@@ -51,7 +51,7 @@ Videos and articles can use a complete web address and the type `VIDEO` or `LINK
 - Semester page and presentation guidelines: [`app/fall-2026/page.tsx`](app/fall-2026/page.tsx)
 - Readings page: [`app/fall-2026/readings/page.tsx`](app/fall-2026/readings/page.tsx)
 - Site styles: [`app/globals.css`](app/globals.css)
-- Course syllabus: [`public/Open-Call-Syllabus-Fall-2026.pdf`](public/Open-Call-Syllabus-Fall-2026.pdf)
+- Course syllabus: [Google Doc](https://docs.google.com/document/d/1hI8jLldc1hYKk_lHXp42A9DLrX_FZLUBdjsx1WyKek0/edit?usp=sharing)
 
 ## Publishing
 
