@@ -38,3 +38,7 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+# Local course source files and generated GitHub Pages output
+/docs/
+/Readings/
+/Open Call Syllabus, Fall 2026 (1).pdf

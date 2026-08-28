@@ -1,7 +1,8 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "open-call-course-site",
   "version": "0.1.0",
   "private": true,
+  "description": "Course website for Open Call at NYU Tisch Interactive Media Arts.",
   "engines": {
     "node": ">=22.13.0"
   },

@@ -1,100 +1,58 @@
-# vinext-starter
+# Open Call
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Course website for **Open Call**, taught by Shuang Cai in NYU Tisch School of the Arts’ Interactive Media Arts program.
 
-## Prerequisites
+**Live site:** [owochel.github.io/opencall](https://owochel.github.io/opencall/)
 
-- Node.js `>=22.13.0`
+## Fall 2026
 
-## Quick Start
+The Fall 2026 site contains:
 
-```bash
-npm install
-npm run dev
-npm run build
-```
+- the weekly course schedule;
+- assigned readings and videos;
+- reading and media object presentation guidelines;
+- the course syllabus.
 
-This starter does not use `wrangler.jsonc`.
+[View Fall 2026](https://owochel.github.io/opencall/fall-2026/)
 
-## Included Shape
+## Update the schedule
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+All weekly information is kept in one file:
 
-## Workspace Auth Headers
+[`app/fall-2026/schedule-data.ts`](app/fall-2026/schedule-data.ts)
 
-Signed-in visitors receive both `oai-authenticated-user-id` and `oai-authenticated-user-email`. Private Sites require every visitor to sign in; public Sites may also have anonymous visitors, for whom neither header is present.
+Each entry is one week. Edit its date, theme, question, in-class activity, due work, or readings, then commit and push the change to `main`. GitHub Pages will update automatically.
 
-The user ID is stable for the same user on the same Site and different across Sites. Email and name are intended for display or contact purposes.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const userId = requestHeaders.get("oai-authenticated-user-id");
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
+```ts
+{
+  week: "1",
+  date: "9/14",
+  theme: "What is Curating?",
+  question: "...",
+  activity: "...",
+  due: "...",
+  readings: [
+    { title: "Reading title", href: "/readings/file.pdf", type: "PDF" },
+  ],
 }
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## Add or replace a reading
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+1. Put the PDF in [`public/readings`](public/readings).
+2. Open [`app/fall-2026/schedule-data.ts`](app/fall-2026/schedule-data.ts).
+3. Add the reading to the appropriate week using its title—not its filename—as the visible `title`.
+4. Commit and push to `main`.
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+Videos and articles can use a complete web address and the type `VIDEO` or `LINK`.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+## Other course content
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+- Semester page and presentation guidelines: [`app/fall-2026/page.tsx`](app/fall-2026/page.tsx)
+- Readings page: [`app/fall-2026/readings/page.tsx`](app/fall-2026/readings/page.tsx)
+- Site styles: [`app/globals.css`](app/globals.css)
+- Course syllabus: [`public/Open-Call-Syllabus-Fall-2026.pdf`](public/Open-Call-Syllabus-Fall-2026.pdf)
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+## Publishing
 
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Every push to `main` runs the GitHub Pages workflow in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). The generated `docs` folder is local output and should not be edited or committed.
