@@ -45,6 +45,7 @@ export const schedule: ScheduleRow[] = [
     question: "How do curators work with artists, designers, technicians, institutions, and communities to realize exhibitions?",
     activity: "Media Object Presentation. Reading Discussion.", due: "Reading notations. Start working on your piece.",
     readings: [
+      { title: "Making it up as you go along: How I Wrote Art Worlds", href: "https://www.howardsbecker.com/articles/writingaw.html", type: "LINK" },
       { title: "Sarah Cook's essay in New Media in the White Cube and Beyond: Curatorial Models for Digital Art", href: "/readings/New%20Media%20in%20the%20White%20Cube%20and%20Beyond%20Curatorial%20Models%20for%20Digital%20Art%20(Christiane%20Paul).pdf", type: "PDF" },
       { title: "Making Exhibitions as We Research Through Art: The Exhibition Operations Kit", href: "/readings/26CC_PictorialsCameraReady.pdf", type: "PDF" },
     ],
