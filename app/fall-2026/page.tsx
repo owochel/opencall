@@ -6,11 +6,13 @@ export default function Fall2026() {
     <div className="course-layout">
       <aside className="course-nav">
         <h1>Fall 2026</h1>
-        <p>Mon 9–12<br />4 Credits<br />Instructor: shuang cai<br />GA: Jisoo Kim</p>
+        <p>Mon 9–12<br />4 Credits<br />Instructor: <a href="https://shuangcai.cargo.site/">shuang cai</a><br />GA: Jisoo Kim</p>
         <nav aria-label="Fall 2026"><a href="#course-description">Course Description</a><a href="#presentations">Presentations</a><a href="#course-schedule">Course Schedule</a><a href="/fall-2026/readings">Readings</a><a href="https://docs.google.com/document/d/1hI8jLldc1hYKk_lHXp42A9DLrX_FZLUBdjsx1WyKek0/edit?usp=sharing">Course Syllabus</a></nav>
       </aside>
       <div className="course-content">
-        <section id="course-description"><h2>Course Description</h2><p>This class is for students interested in making, displaying, and installing art for interactive media art exhibitions. This class will prepare you to apply for and develop work for open calls and everything else that happens after you are selected. The class will have an opportunity to exhibit a group show in a real NYC gallery towards the end of the semester. The students will collaborate to title, describe, and document the works in the show. They will also have an opportunity to do a public talk back about their work, organize a reception, and add a piece to their portfolio.</p></section>
+        <section id="course-description"><h2>Course Description</h2>
+        <p>This class is for students interested in making, displaying, and installing art for interactive media art exhibitions. This class will prepare you to apply for and develop work for open calls and everything else that happens after you are selected. The class will have an opportunity to exhibit a group show in a real NYC gallery towards the end of the semester. The students will collaborate to title, describe, and document the works in the show. They will also have an opportunity to do a public talk back about their work, organize a reception, and add a piece to their portfolio.</p>
+         <p>Original Course Development by <a href="https://blairsimmons.com/">Blair Simmons</a> - NYU Tisch School of the Arts</p></section>
         <section id="presentations"><h2>Presentations</h2><div className="presentation-grid">
           <article>
             <h3>Reading Presentation / Discussion Leader</h3>
