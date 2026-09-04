@@ -33,6 +33,9 @@ h1 { margin: 0 0 24px; font-size: clamp(48px, 8vw, 120px); line-height: .9; lett
 .schedule-row h3 { margin: 0 0 8px; font-size: 18px; }
 .schedule-row h4 { margin: 2px 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
 .schedule-row p { margin: 0; font-size: 13px; line-height: 1.45; }
+.activity-list { margin: 0; padding-left: 18px; }
+.activity-list li { font-size: 13px; line-height: 1.45; margin: 0 0 4px; }
+.activity-list li:last-child { margin-bottom: 0; }
 .week-readings { margin-top: 18px; }
 .week-readings a { display: block; margin-top: 7px; font-size: 13px; line-height: 1.35; }
 .reading-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding-top: 48px; }
