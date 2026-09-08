@@ -26,8 +26,8 @@ export const presentations = [
     paragraphs: [
       "For five weeks of the semester, three students will be responsible for leading the class’s engagement with the assigned readings. Each student will sign up for one reading week.",
       "The team may decide how to organize the presentation portion. You may work together on one integrated presentation, or divide the readings, concepts, or perspectives among yourselves and present separately. There is no required format as long as the presentation collectively gives the class useful ways into the week’s material.",
-      "A successful reading presentation should leave the class with something to think with (~25mins).",
-      "After presenting, you (and your co-presenters) will collaborate to lead the class on a discussion of the reading (~25 mins). Your discussion should build from the readings but does not need to remain confined to them.",
+      "A successful reading presentation should leave the class with something to think with (~20mins).",
+      "After presenting, you (and your co-presenters) will collaborate to lead the class on a discussion of the reading (~20 mins). Your discussion should build from the readings but does not need to remain confined to them.",
     ],
     bullets: [],
   },
