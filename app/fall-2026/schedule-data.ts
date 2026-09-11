@@ -163,7 +163,10 @@ export const schedule: ScheduleRow[] = [
       "Pending",
     ],
     due: "Reading notations.",
-    readings: [{ title: "Curating: Politics of Display, Politics of Site, Politics of Transfer and Translation, Politics of Knowledge Production — Dorothee Richter", href: "/readings/DR_Curating_WEB.pdf", type: "PDF" }],
+    readings: [
+      { title: "Curating: Politics of Display, Politics of Site, Politics of Transfer and Translation, Politics of Knowledge Production — Dorothee Richter", href: "/readings/DR_Curating_WEB.pdf", type: "PDF" },
+      { title: "Slo Curating — Sadia Shirazi", href: "/readings/Slo%20Curating%20%E2%80%94%20PRAKSIS.pdf", type: "PDF" },
+    ],
   },
   {
     week: "13", date: "12/7", theme: "Reflection and career development",
