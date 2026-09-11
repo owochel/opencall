@@ -166,6 +166,7 @@ export const schedule: ScheduleRow[] = [
     readings: [
       { title: "Curating: Politics of Display, Politics of Site, Politics of Transfer and Translation, Politics of Knowledge Production — Dorothee Richter", href: "/readings/DR_Curating_WEB.pdf", type: "PDF" },
       { title: "Slo Curating — Sadia Shirazi", href: "/readings/Slo%20Curating%20%E2%80%94%20PRAKSIS.pdf", type: "PDF" },
+      { title: "Beyond Ownership: Sustaining Art as Practices and Processes — Ashley Lee Wong (pp. 237–252)", href: "/readings/Beyond%20Ownership%20%E2%80%94%20Ashley%20Lee%20Wong.pdf", type: "PDF" },
     ],
   },
   {
