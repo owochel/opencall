@@ -111,6 +111,7 @@ export const schedule: ScheduleRow[] = [
     week: "7", date: "10/26", theme: "Interpretation & Mediation",
     question: "How do wall texts, catalogs, websites, labels, guides, and AI shape how audiences understand work?",
     activity: [
+      "Media Object Presentation",
       "Guest Speaker: Mingna",
       "Label making workshop",
     ],
