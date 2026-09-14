@@ -2,6 +2,7 @@ export type Reading = {
   title: string;
   href: string;
   type: "PDF" | "VIDEO" | "LINK";
+  optional?: boolean;
 };
 
 export type ScheduleRow = {
@@ -30,8 +31,8 @@ export const schedule: ScheduleRow[] = [
     ],
     due: "Journal Entry",
     readings: [
-      { title: "What are the Different Types of Art Exhibitions? — CAI", href: "/readings/What%20are%20the%20Different%20Types%20of%20Art%20Exhibitions_%20%E2%80%94%20CAI.pdf", type: "PDF" },
-      { title: "Open Call: Portals at The Shed | ARTnews On View, 2025", href: "https://www.theshed.org/program/447-open-call-portals", type: "LINK" },
+      { title: "What are the Different Types of Art Exhibitions? — CAI", href: "/readings/What%20are%20the%20Different%20Types%20of%20Art%20Exhibitions_%20%E2%80%94%20CAI.pdf", type: "PDF", optional: true },
+      { title: "Open Call: Portals at The Shed | ARTnews On View, 2025", href: "https://www.theshed.org/program/447-open-call-portals", type: "LINK", optional: true },
       { title: "What Is It Like To Be an Open Call Artist?", href: "https://cdn.filepicker.io/api/file/oW5IGOQGQu2zNtHnikdp?fit=max", type: "LINK" },
     ],
   },
