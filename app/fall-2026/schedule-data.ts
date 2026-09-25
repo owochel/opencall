@@ -12,6 +12,10 @@ export type ScheduleRow = {
   question: string;
   activity: string[];
   due: string;
+  event?: {
+    title: string;
+    href: string;
+  };
   readings?: Reading[];
 };
 
@@ -147,14 +151,13 @@ export const schedule: ScheduleRow[] = [
     due: "No readings due this day. Make adjustments.",
   },
   {
-    week: "11", date: "11/23", theme: "Documentation",
-    question: "Ways of documentation.",
+    week: "11", date: "11/22 · 4 PM", theme: "TARYN SIMON FATHER COUNTRY I DO LOVE YOU",
+    question: "",
     activity: [
-      "Short Lecture",
-      "Reading Discussion",
-      "Post-Install Reflection Show-n-Tell",
+      "Guggenheim trip",
     ],
-    due: "Short reading. Post-Install Reflection 5 min/person.",
+    due: "No class on 11/23.",
+    event: { title: "Guggenheim", href: "https://www.guggenheim.org/exhibition/taryn-simon" },
   },
   {
     week: "12", date: "11/30", theme: "The Politics of Curating",
