@@ -154,7 +154,7 @@ export const schedule: ScheduleRow[] = [
     week: "11", date: "11/22 · 4 PM", theme: "TARYN SIMON FATHER COUNTRY I DO LOVE YOU",
     question: "",
     activity: [
-      "Guggenheim trip",
+      "Field trip to the Guggenheim",
     ],
     due: "No class on 11/23.",
     event: { title: "Guggenheim", href: "https://www.guggenheim.org/exhibition/taryn-simon" },
